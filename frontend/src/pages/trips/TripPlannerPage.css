@@ -1,0 +1,219 @@
+/* Trip Planner Page Styling */
+
+.planner-page {
+  padding: 3rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.planner-header {
+  margin-bottom: 2rem;
+}
+
+.planner-title {
+  font-size: var(--font-size-h2);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.planner-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.planner-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.form-section {
+  margin-bottom: 1.75rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-bottom: 0.625rem;
+  color: var(--text-primary);
+}
+
+.required-star {
+  color: var(--accent);
+  margin-left: 0.25rem;
+}
+
+/* Polished Dark Inputs */
+.planner-input {
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background-color: rgba(6, 10, 18, 0.7);
+  color: #FFFFFF;
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  color-scheme: dark; /* Native dark calendar popup */
+}
+
+.planner-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.planner-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.25);
+  background-color: rgba(6, 10, 18, 0.95);
+}
+
+/* Select Dropdown Styling */
+select.planner-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2322D3EE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+select.planner-input option {
+  background-color: #0A0E17;
+  color: #FFFFFF;
+  padding: 0.75rem;
+}
+
+/* Native Date Input Icon */
+input[type="date"].planner-input::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) sepia(1) saturate(5) hue-rotate(140deg);
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+input[type="date"].planner-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Grid for Dates */
+.dates-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* Style Chips */
+.style-chips {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.style-chip {
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.style-chip:hover {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.3);
+  color: var(--accent);
+}
+
+.style-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #040810;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.35);
+}
+
+/* Action Buttons */
+.planner-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.planner-btn-secondary {
+  flex: 1;
+  height: 3.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.planner-btn-primary {
+  flex: 1;
+  height: 3.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 13, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  color: #FFFFFF;
+}
+
+.spinner {
+  width: 54px;
+  height: 54px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  margin-bottom: 1.25rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .planner-page {
+    padding: 2rem 1rem;
+  }
+  .planner-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+  .dates-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .planner-actions {
+    flex-direction: column;
+  }
+  .planner-actions .btn {
+    width: 100%;
+  }
+}

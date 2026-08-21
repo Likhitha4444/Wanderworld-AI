@@ -1,0 +1,26 @@
+# Django
+venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+media/
+
+# React
+node_modules/
+dist/
+build/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Security & Local Dev
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]

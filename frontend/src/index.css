@@ -1,0 +1,26 @@
+@import './styles/design-system.css';
+@import './styles/layout.css';
+@import './styles/components.css';
+@import './styles/home.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Ensure full width and proper background for app */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
