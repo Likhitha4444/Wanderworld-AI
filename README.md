@@ -92,7 +92,7 @@ Travel DNA builds a profile of the user's travel preferences and interests to im
 
 ### 🎯 Recommendations
 
-![WanderWorld Recommendations](wander-screenshot/recommendation.png)
+![WanderWorld Recommendations](wander-screenshot/recommendations.png)
 
 ### ❤️ Wishlist
 
